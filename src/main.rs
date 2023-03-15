@@ -28,13 +28,14 @@ fn main() {
         number_of_guesses += 1;
 
         match guess.cmp(&secret_number){
-            Ordering::Less => println!("Too small!"),
-            Ordering::Greater => println!("Too large!"),
+            Ordering::Less => println!("Too small! Try Again"),
+            Ordering::Greater => println!("Too large! Try Again"),
             Ordering::Equal => {
                 println!("You win!!! Guesses taken: {number_of_guesses}");
                 break;
             }
         }
+        println!("----------------------------------------------");
     }
     
 }
